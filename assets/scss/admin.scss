@@ -65,7 +65,7 @@ body {
 }
 
 #wpadminbar #wp-admin-bar-wp-logo > .ab-item .ab-icon:before {
-  background-image: url('./assets/images/rrh_icon_white.png') !important;
+  background: linear-gradient(0deg, rgba(0,0,0,0.6), rgba(0,0,0,0.6)),  url('./assets/images/rrh_icon_white.png') !important;
   background-position: 0 0;
   color: rgba(0, 0, 0, 0);
 }
