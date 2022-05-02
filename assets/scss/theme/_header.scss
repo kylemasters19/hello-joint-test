@@ -1,0 +1,108 @@
+/**
+ * Header styling and layout
+ */
+
+.site-header {
+  /* Backwards compat for Hello 2.3.0 */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  position: relative;
+
+  .site-navigation {
+	justify-content: flex-end;
+  }
+
+  .site-branding {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+  }
+
+  .header-inner {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+
+	.custom-logo-link {
+	  display: block;
+	}
+
+	.site-branding {
+
+	  .site-title,
+	  .site-description {
+		margin: 0;
+	  }
+
+	  &.show-title {
+
+		.site-logo {
+		  display: none !important;
+		}
+	  }
+
+	  &.show-logo {
+
+		.site-title {
+		  display: none !important;
+		}
+	  }
+	}
+  }
+
+  &:not(.header-stacked) {
+
+	.header-inner {
+
+	  .site-branding {
+		max-width: 30%;
+	  }
+
+	  .site-navigation {
+		max-width: 70%;
+	  }
+	}
+  }
+
+  &.header-inverted {
+
+	.header-inner {
+	  flex-direction: row-reverse;
+
+	  .site-branding {
+		text-align: right;
+	  }
+
+	  .site-navigation {
+		justify-content: start;
+	  }
+	}
+  }
+
+  &.header-stacked {
+
+	.header-inner {
+	  align-items: center;
+	  flex-direction: column;
+	  text-align: center;
+	}
+  }
+}
+
+@media (max-width: $screen-xs) {
+  .site-header {
+
+	.header-inner {
+
+	  &:not(.header-stacked) {
+
+		.site-branding {
+		  max-width: 80%;
+		}
+	  }
+	}
+  }
+}

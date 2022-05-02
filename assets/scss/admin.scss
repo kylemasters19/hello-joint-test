@@ -1,0 +1,75 @@
+body {
+  &.login {
+	background-image: url('./assets/images/login_bg.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+
+	#login {
+	  background: #fff;
+	  margin: 50px auto;
+	  padding: 40px 20px;
+	  border-radius: 8px;
+	  h1 {
+		a {
+		  background-image: url('./assets/images/rrh_logo.png');
+		  height: 65px;
+		  width: 320px;
+		  background-size: 320px 65px;
+		  background-repeat: no-repeat;
+		}
+	  }
+	}
+
+	form {
+	  box-shadow: none;
+	  padding: 20px;
+	  border: none;
+
+	  .forgetmenot {
+		float: none;
+	  }
+
+	  p.submit {
+		margin-top: 15px !important;
+	  }
+	}
+
+	label {
+	  color: #555;
+	  font-size: 14px;
+	}
+
+	input {
+	  border-radius: 8px;
+	}
+
+	&.wp-core-ui {
+	  .button-primary {
+		background: #51E07C;
+		border-color: #51E07C;
+		box-shadow: 0 1px 0 #51E07C;
+		color: #fff;
+		text-shadow: none;
+		float: none;
+		clear: both;
+		display: block;
+		width: 100%;
+		padding: 7px;
+		height: auto;
+		font-size: 15px;
+		border-radius: 8px;
+	  }
+	}
+  }
+}
+
+#wpadminbar #wp-admin-bar-wp-logo > .ab-item .ab-icon:before {
+  background-image: url('./assets/images/rrh_icon_white.png') !important;
+  background-position: 0 0;
+  color: rgba(0, 0, 0, 0);
+}
+
+#wpadminbar #wp-admin-bar-wp-logo.hover > .ab-item .ab-icon {
+  background-position: 0 0;
+}
