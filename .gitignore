@@ -6,7 +6,7 @@ hello-joint/
 log/
 vendor/
 composer.lock
-package-lock.json
+## package-lock.json
 .DS_Store
 .project
 Thumbs.db
