@@ -31,5 +31,5 @@ while ( have_posts() ) :
 		<?php comments_template(); ?>
 	</main>
 
-<?php
+	<?php
 endwhile;
