@@ -10,10 +10,10 @@
     "build:dev:watch": "concurrently \"grunt default watch\" \"webpack --env=developmentLocalWithWatch\" \"webpack --env=productionLocalWithWatch\"",
     "clean:build": "rimraf build && rimraf hello-joint",
     "zip": "npm run clean:build && npm run build:prod && rename build hello-joint && npm run ziponly",
-	"ziponly": "dir-archiver --src hello-joint --dest hello-joint/hello-joint.%npm_package_version%.zip",
+    "ziponly": "dir-archiver --src hello-joint --dest hello-joint/hello-joint.%npm_package_version%.zip",
     "lint:js": "eslint .",
-	"demo": "echo %npm_package_version%",
-	"check-env": "node -e console.log(process.env.npm_package_version)"
+    "demo": "echo %npm_package_version%",
+    "check-env": "node -e console.log(process.env.npm_package_version)"
   },
   "devDependencies": {
     "@babel/core": "7.0.0",
@@ -34,7 +34,7 @@
     "eslint-plugin-jsx-a11y": "^6.1.1",
     "eslint-plugin-no-jquery": "^2.5.0",
     "eslint-plugin-react": "^7.11.1",
-    "eslint-plugin-wordpress": "git://github.com/WordPress-Coding-Standards/eslint-plugin-wordpress.git#1774343f6226052a46b081e01db3fca8793cc9f1",
+	"eslint-plugin-wordpress": "https://github.com/WordPress-Coding-Standards/eslint-plugin-wordpress.git#1774343f6226052a46b081e01db3fca8793cc9f1",
     "grunt": "^1.4.1",
     "grunt-checktextdomain": "^1.0.1",
     "grunt-contrib-sass": "~1.0.0",
@@ -45,6 +45,7 @@
     "grunt-webpack": "^4.0.3",
     "grunt-wp-readme-to-markdown-with-extra": "~2.2.0",
     "load-grunt-tasks": "^4.0.0",
+    "marked": "^4.0.15",
     "matchdep": "~2.0.0",
     "node-sass": "^5.0.0",
     "npm-build-zip": "^1.0.3",

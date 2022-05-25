@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-const HELLO_JOINT_VERSION = '2.5.0';
+const HELLO_JOINT_VERSION = '1.0.0';
 
 if ( ! isset( $content_width ) ) {
 	$content_width = 800; // Pixels.
