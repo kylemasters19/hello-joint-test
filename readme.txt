@@ -89,6 +89,9 @@ aa
 
 == Changelog ==
 
+= 1.5.0 - 2022-05-26 =
+* Squish some bugs.
+
 = 1.4.0 - 2022-05-26 =
 * Squish some bugs.
 
