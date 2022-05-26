@@ -121,7 +121,7 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           tag_name: v${{ env.PACKAGE_VERSION }}
-          files: hello-joint.${{ env.PACKAGE_VERSION }}.zip
+          files: hello-joint.*.zip
           body_path: temp-changelog-from-readme.txt
         env:
           GITHUB_TOKEN: ${{ secrets.MAINTAIN_TOKEN }}
