@@ -5,8 +5,8 @@
 **Contributors:** [elemntor](https://profiles.wordpress.org/elemntor), [KingYes](https://profiles.wordpress.org/KingYes), [ariel.k](https://profiles.wordpress.org/ariel.k), [jzaltzberg](https://profiles.wordpress.org/jzaltzberg), [mati1000](https://profiles.wordpress.org/mati1000), [bainternet](https://profiles.wordpress.org/bainternet), [korvath](https://profiles.wordpress.org/korvath)  
 **Requires at least:** 4.7  
 **Tested up to:** 5.9  
-**Stable tag:** 2.5.0  
-**Version:** 2.5.0  
+**Stable tag:** 1.1.0  
+**Version:** 1.1.0  
 **Requires PHP:** 5.6  
 **License:** GNU General Public License v3 or later  
 **License URI:** https://www.gnu.org/licenses/gpl-3.0.html  
@@ -87,3 +87,12 @@ Source: https://fontawesome.com/v4.7.0/
 Image for theme screenshot, Copyright Jason Blackeye
 License: CC0 1.0 Universal (CC0 1.0)
 Source: https://stocksnap.io/photo/4B83RD7BV9
+aa
+
+## Changelog ##
+
+### 1.1.0 - 2022-05-26 ###
+* Squish some bugs.
+
+### 1.0.0 - 2022-05-26 ###
+* Initial Release.
