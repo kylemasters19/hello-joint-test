@@ -3,33 +3,40 @@
  */
 'use strict';
 
-module.exports = function( grunt ) {
-	require( 'matchdep' ).filterDev( 'grunt-*' ).forEach( grunt.loadNpmTasks );
+module.exports = function (grunt) {
+	require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 
-	const sass = require( 'node-sass' );
+	const sass = require('node-sass');
 
 	// Project configuration.
-	grunt.initConfig( {
-		pkg: grunt.file.readJSON( 'package.json' ),
+	grunt.initConfig({
+		pkg: grunt.file.readJSON('package.json'),
 
 		sass: {
 			options: {
 				implementation: sass,
 			},
 			dist: {
-				files: 'production' === grunt.option( 'environment' ) ? [ {
-					expand: true,
-					cwd: 'assets/scss',
-					src: '*.scss',
-					dest: './build',
-					ext: '.css',
-				} ] : [ {
-					expand: true,
-					cwd: 'assets/scss',
-					src: '*.scss',
-					dest: './',
-					ext: '.css',
-				} ],
+				files:
+					'production' === grunt.option('environment')
+						? [
+								{
+									expand: true,
+									cwd: 'assets/scss',
+									src: '*.scss',
+									dest: './build',
+									ext: '.css',
+								},
+						  ]
+						: [
+								{
+									expand: true,
+									cwd: 'assets/scss',
+									src: '*.scss',
+									dest: './',
+									ext: '.css',
+								},
+						  ],
 			},
 		},
 
@@ -39,50 +46,46 @@ module.exports = function( grunt ) {
 					//map: true,
 
 					processors: [
-						require( 'autoprefixer' )( {
+						require('autoprefixer')({
 							browsers: 'last 3 versions',
-						} ),
+						}),
 					],
 				},
-				files: [ {
-					src: [
-						'*.css',
-						'!*.min.css',
-					],
-				} ],
+				files: [
+					{
+						src: ['*.css', '!*.min.css'],
+					},
+				],
 			},
 			minify: {
 				options: {
 					processors: [
-						require( 'autoprefixer' )( {
+						require('autoprefixer')({
 							browsers: 'last 3 versions',
-						} ),
-						require( 'cssnano' )( {
+						}),
+						require('cssnano')({
 							reduceIdents: false,
 							zindex: false,
-						} ),
+						}),
 					],
 				},
-				files: [ {
-					expand: true,
-					src: 'production' === grunt.option( 'environment' ) ? [
-						'build/*.css',
-						'!build/*.min.css',
-					] : [
-						'*.css',
-						'!*.min.css',
-					],
-					ext: '.min.css',
-				} ],
+				files: [
+					{
+						expand: true,
+						src:
+							'production' === grunt.option('environment')
+								? ['build/*.css', '!build/*.min.css']
+								: ['*.css', '!*.min.css'],
+						ext: '.min.css',
+					},
+				],
 			},
 		},
 
 		watch: {
 			styles: {
-				files: [
-					'assets/scss/**/*.scss',
-				],
-				tasks: [ 'styles' ],
+				files: ['assets/scss/**/*.scss'],
+				tasks: ['styles'],
 			},
 		},
 
@@ -131,26 +134,14 @@ module.exports = function( grunt ) {
 				},
 			},
 		},
+	});
 
-	} );
+	grunt.registerTask('i18n', ['checktextdomain']);
 
-	grunt.registerTask( 'i18n', [
-		'checktextdomain',
-	] );
+	grunt.registerTask('wp_readme', ['wp_readme_to_markdown']);
 
-	grunt.registerTask( 'wp_readme', [
-		'wp_readme_to_markdown',
-	] );
-
-	grunt.registerTask( 'styles', [
-		'sass',
-		'postcss',
-	] );
+	grunt.registerTask('styles', ['sass', 'postcss']);
 
 	// Default task(s).
-	grunt.registerTask( 'default', [
-		'i18n',
-		'styles',
-		'wp_readme',
-	] );
+	grunt.registerTask('default', ['i18n', 'styles', 'wp_readme']);
 };
