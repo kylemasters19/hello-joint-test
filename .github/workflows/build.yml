@@ -30,10 +30,10 @@ jobs:
         if: github.event_name == 'push' && (startsWith(github.ref, 'refs/heads/release/') || github.ref == 'refs/heads/staging')
         run: |
           npm config set git-tag-version false
-          if [ "${GITHUB_REF:11}" == "dev" ];
+          if [ "${GITHUB_REF_NAME}" == "dev" ];
             then npm version patch
           fi
-          if [[ "${GITHUB_REF:11:7}" == "master" ]];
+          if [[ "${GITHUB_REF_NAME}" == "master" ]];
             then npm version minor
           fi
       - name: Build
