@@ -11,9 +11,9 @@
     "clean:build": "rimraf build && rimraf hello-joint",
     "rename": "node -e \"require('fs').rename('build', 'hello-joint', function(err) { if (err) console.log(err); console.log('File rename.') })\"",
     "zip": "npm run clean:build && npm run build:prod && npm run rename && npm run ziponly",
-    "ziponly": "dir-archiver --src hello-joint --dest hello-joint/hello-joint.%npm_package_version%.zip",
+    "ziponly": "dir-archiver --src hello-joint --dest hello-joint/hello-joint.$npm_package_version.zip",
     "lint:js": "eslint .",
-    "demo": "echo %npm_package_version%",
+    "demo": "echo $npm_package_version",
     "check-env": "node -e console.log(process.env.npm_package_version)"
   },
   "devDependencies": {
