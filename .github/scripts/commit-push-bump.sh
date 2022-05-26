@@ -8,6 +8,6 @@ fi
 
 bash "${GITHUB_WORKSPACE}/.github/scripts/set-git-user.sh"
 
-ehco "Commit and bump version ${PACKAGE_VERSION}"
+echo "Commit and bump version ${PACKAGE_VERSION}"
 git commit -am "Bump ${PACKAGE_VERSION}"
 git push
