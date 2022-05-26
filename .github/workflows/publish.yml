@@ -102,7 +102,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: hello-joint.${{ env.PACKAGE_VERSION }}
-          path: hello-joint.*.zip
+          path: hello-joint.${{ env.PACKAGE_VERSION }}.zip
           if-no-files-found: error
       - name: Create tag
         env:
