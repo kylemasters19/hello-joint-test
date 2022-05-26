@@ -85,3 +85,12 @@ Source: https://fontawesome.com/v4.7.0/
 Image for theme screenshot, Copyright Jason Blackeye
 License: CC0 1.0 Universal (CC0 1.0)
 Source: https://stocksnap.io/photo/4B83RD7BV9
+aa
+
+== Changelog ==
+
+= 1.1.0 - 2022-05-26 =
+* Squish some bugs.
+
+= 1.0.0 - 2022-05-26 =
+* Initial Release.
